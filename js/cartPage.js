@@ -132,7 +132,7 @@ function removeItem(productId) {
 
 // Checkout: Clear the cart and display a confirmation message
 function checkout() {
-    cartManager.checkout();
+    // cartManager.checkout();
     renderCart(); // Re-render the cart
     alert("Order placed successfully! Thank you for shopping with us.");
 }
