@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <a 
+        href="index.html" 
+        style="
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding for size */
+            border: 2px solid #0056b3; /* Darker blue border */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Make it behave like a button */
+        "
+    >
+        Continue Shopping
+    </a>
+    </header>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button id="checkout-button">Checkout</button>
+    <script type="module" src="js/cartPage.js"></script>
+</body>
+</html>

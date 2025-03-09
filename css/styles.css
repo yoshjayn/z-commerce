@@ -1,0 +1,218 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #2c3e50; /* Dark blue header */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Cart Counter */
+#cart-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c; /* Red background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s ease;
+}
+
+#cart-link:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.badge {
+    background: #3498db; /* Blue badge */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 18px;
+}
+
+#cart-link i {
+    font-size: 22px;
+}
+/* Container and Card Styles */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.productDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productDiv div {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.productDiv div:hover {
+    background-color: #f1f1f1; /* Light gray hover effect */
+}
+
+.productDiv img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Details Page */
+#product-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #3498db; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #27ae60; /* Green button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #219653; /* Darker green on hover */
+}
+
+/* Cart Page Styles */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    height: 100px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50; /* Dark blue text */
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333; /* Dark text */
+}
+
+.cart-item button {
+    background: #e74c3c; /* Red button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background: #c0392b; /* Darker red on hover */
+}
