@@ -57,19 +57,48 @@ function renderCart() {
     const cartTotal = document.getElementById("cart-total");
 
     cartItems.innerHTML = "";
+
+    // cartManager.cart.forEach(item => {
+    //     const itemDiv = document.createElement("div");
+    //     itemDiv.className = "cart-item";
+    //     itemDiv.innerHTML = `
+    //         <img src="${item.image}" alt="${item.title}" style="height: 100px;">
+    //         <h3>${item.title}</h3>
+    //         <p>$${item.price} x ${item.quantity}</p>
+    //         <button class="quantity-decrease" data-id="${item.id}">-</button>
+    //         <button class="quantity-increase" data-id="${item.id}">+</button>
+    //         <button class="remove-item" data-id="${item.id}">Remove</button>
+    //     `;
+    //     cartItems.appendChild(itemDiv);
+    // });
+
     cartManager.cart.forEach(item => {
+        let card = document.createElement("div");
+        card.className = "card";
         const itemDiv = document.createElement("div");
         itemDiv.className = "cart-item";
         itemDiv.innerHTML = `
             <img src="${item.image}" alt="${item.title}" style="height: 100px;">
             <h3>${item.title}</h3>
             <p>$${item.price} x ${item.quantity}</p>
-            <button class="quantity-decrease" data-id="${item.id}">-</button>
+            
+            `;
+        let btns = document.createElement("div");
+        console.log(btns)
+        btns.className = "btns";
+        btns.innerHTML = `<button class="quantity-decrease" data-id="${item.id}">-</button>
             <button class="quantity-increase" data-id="${item.id}">+</button>
             <button class="remove-item" data-id="${item.id}">Remove</button>
-        `;
-        cartItems.appendChild(itemDiv);
+            `;
+        card.append(itemDiv, btns)
+        // itemDiv.append(btns)
+        cartItems.appendChild(card);
     });
+    
+
+
+
+
 
     // Update the total price
     cartTotal.innerText = cartManager.getCartTotal().toFixed(2);
@@ -132,7 +161,7 @@ function removeItem(productId) {
 
 // Checkout: Clear the cart and display a confirmation message
 function checkout() {
-    // cartManager.checkout();
+    cartManager.checkout();
     renderCart(); // Re-render the cart
     alert("Order placed successfully! Thank you for shopping with us.");
 }

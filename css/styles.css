@@ -68,21 +68,7 @@ header {
     margin-top: 20px;
 }
 
-.card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .productDiv {
     display: flex;
@@ -168,6 +154,23 @@ button:hover {
 }
 
 /* Cart Page Styles */
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .cart-item {
     display: flex;
     align-items: center;
@@ -202,8 +205,20 @@ button:hover {
     font-size: 16px;
     color: #333; /* Dark text */
 }
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; */
 
-.cart-item button {
+}
+
+.btns button {
     background: #e74c3c; /* Red button */
     color: white;
     border: none;
@@ -213,6 +228,6 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-.cart-item button:hover {
+.btns button:hover {
     background: #c0392b; /* Darker red on hover */
 }
